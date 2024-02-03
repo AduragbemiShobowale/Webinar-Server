@@ -17,12 +17,23 @@ const confirmationEmail = async ({
   email,
 }) => {
   try {
-    const emailBody = `<p style="padding: 0 70px;">
-    Lorem ipsum dolor sit amet consectetur. Habitant aliquet suscipit
-    sed facilisi sit. Nibh at nisl augue viverra vitae amet orci lorem.
-    Luctus faucibus laoreet eu parturient in. Elementum consectetur enim
-    fames velit sit donec.
-  </p>`;
+    const emailBody = `<div style="text-align: center; background-color: #f1f2fe; margin: auto;">
+    <div style="background-color: black; color: white;">
+      <h2>The Ultimate Academy Launch</h2>
+    </div>
+    <div>
+      <h2>
+        Congratulations Temi! 🎉 You're officially part of our upcoming
+        Exclusive Webinar Experience.
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur. Habitant aliquet suscipit sed
+        facilisi sit. Nibh at nisl augue viverra vitae amet orci lorem. Luctus
+        faucibus laoreet eu parturient in. Elementum consectetur enim fames
+        velit sit donec.
+      </p>
+    </div>
+  </div>`;
 
     const info = await mailTransporter.sendMail({
       from: process.env.NODEMAIL_EMAIL,
